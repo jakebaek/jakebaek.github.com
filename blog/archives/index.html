@@ -9,8 +9,8 @@
   <meta name="author" content="Jake Baek">
 
   
-  <meta name="description" content=" Blog Archive 2012 test
-Mar 26 2012 Recent Posts test ">
+  <meta name="description" content="Blog Archive 2012 test
+Mar 26 2012 Recent Posts test GitHub Repos Status updating... @jakebaek on GitHub $.domReady(function(){ if (!window.jXHR){ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -104,6 +104,35 @@ Mar 26 2012 Recent Posts test ">
       </li>
     
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/jakebaek">@jakebaek</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'jakebaek',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
